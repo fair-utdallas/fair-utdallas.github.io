@@ -93,7 +93,6 @@ home_cards = home["research_featured"].map do |i|
   item = thrusts.fetch(i)
   <<~HTML
     <a class="research-card" href="research.html">
-      <span class="card-number">#{format("%02d", i + 1)}</span>
       <h3>#{h(item["title"])}</h3>
       <p>#{h(item["text"])}</p>
       <b>#{h(item["lead"])}</b>
@@ -103,7 +102,6 @@ end.join
 home_cards += <<~HTML
   <a class="research-card featured" href="research.html">
     <span class="card-arrow">\u2197</span>
-    <span class="card-number">#{thrusts.length}</span>
     <h3>#{h(home["research_cta"])}</h3>
     <p>#{h(home["research_cta_text"])}</p>
   </a>
