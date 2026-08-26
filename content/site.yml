@@ -59,7 +59,21 @@ people:
     - { name: Vincent Ng, area: NLP, information extraction, and discourse }
     - { name: Xinya Du, area: NLP, language models, and education }
   affiliated_faculty: Richard Golden · Yonas Tadasse · Justin Ruths · Xiaohu Guo · Lakshman Tamil · Jonathan Tsou · Meenakshi Maitra · Jey Veerasamy · Doug DeGroot · Elmer Salazar · Jie Zhang · Yanwen Xu · Patrick Brandt · Latifur Khan · Laisuo Su
-  external_affiliates: Researchers from TU Darmstadt, UCLA, Duke, Northeastern, Washington State, Oregon State, Tulane, UC Irvine, Indiana University, UT Southwestern, IIT Delhi, IIT Madras, and the Information Sciences Institute.
+  external_affiliates:
+    - { name: Kristian Kersting, area: "Professor and head of hessian.AI · TU Darmstadt · AAAI, EurAI, and AAIA Fellow" }
+    - { name: Guy Van den Broeck, area: "Professor and Samuel Fellow · UCLA" }
+    - { name: Ronald Parr, area: "Professor · Duke University · AAAI Fellow" }
+    - { name: Predrag Radivojac, area: "Professor · Northeastern University · ISMB Fellow" }
+    - { name: Janardhan Doppa, area: "Huie-Rogers Endowed Chair Professor of Computer Science and Berry Distinguished Professor in Engineering · Washington State University" }
+    - { name: Prasad Tadepalli, area: "Professor · Oregon State University" }
+    - { name: Nick Mattei, area: "Assistant Professor · Tulane University" }
+    - { name: Sameer Singh, area: "Professor · University of California, Irvine" }
+    - { name: Jay Pujara, area: "Principal Scientist · Information Sciences Institute" }
+    - { name: David Haas, area: "Professor · Indiana University School of Medicine" }
+    - { name: Lakshmi Raman, area: "Professor · UT Southwestern" }
+    - { name: Mausam, area: "Professor · Indian Institute of Technology Delhi · AAAI Fellow" }
+    - { name: Parag Singla, area: "Professor and Head, School of AI · Indian Institute of Technology Delhi" }
+    - { name: Balaraman Ravindran, area: "Professor and Head, Wadhwani School of AI · Indian Institute of Technology, Madras" }
 centers:
   founding:
     - { name: Center for Machine Learning, text: Theoretical frameworks, algorithms, and the core science of learning. }
