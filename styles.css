@@ -1,5 +1,7 @@
  .name-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;background:transparent;border:0}.name-grid>div{flex:0 0 calc((100% - 28px) / 3);border:1px solid var(--line)}
 @media(max-width:800px){.name-grid>div{flex-basis:100%}}
+.entity-list>div{grid-template-columns:7% minmax(0,55%) 1fr !important}.entity-list h3{white-space:normal}.entity-list p{margin-top:0}
+@media(max-width:800px){.entity-list>div{grid-template-columns:12% 1fr}.entity-list h3{white-space:normal}.entity-list p{grid-column:2}}
 .subhero>p,.intro-band p,.thrust-list p,.entity-list p,.partnership-rows p,.opportunity-cards p{font-size:15px !important;line-height:1.7 !important}.profile p{font-size:14px !important;line-height:1.7 !important}.name-grid p,.group-intro{font-size:12px !important;line-height:1.5 !important}.thrust-list b{font-size:12px !important}
 .nav-contact{padding:12px 19px !important}.nav-contact span{margin-left:12px}
 .contact-page{padding:120px 9vw !important}
