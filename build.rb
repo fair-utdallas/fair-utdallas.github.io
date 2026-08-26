@@ -199,7 +199,7 @@ HTML
 
 partnerships = DATA["partnerships"]
 partnership_rows = partnerships["items"].each_with_index.map { |item, i| "<div><span>#{format("%02d", i + 1)}</span><div><h3>#{h(item["title"])}</h3><p>#{h(item["text"])}</p></div></div>" }.join
-write_page("partnerships.html", "Industry + Government", "partnerships.html", subhero("Industry + government", "Research that\ntravels.", partnerships["intro"], orange: true) + <<~HTML
+write_page("partnerships.html", "Industry + Government", "partnerships.html", subhero("Industry + government", "Research that\ntravels.", partnerships["intro"]) + <<~HTML
   <section class="content-page">
     #{intro_band("From fundamental\n<em>questions to impact.</em>", "Partnerships help translate advances in learning, reasoning, perception, language, and trustworthy AI into real-world practice.")}
     <div class="partnership-rows">#{partnership_rows}</div>
