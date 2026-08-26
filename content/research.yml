@@ -1,0 +1,16 @@
+research:
+  intro: FAIR’s research agenda spans the enduring questions that determine whether AI can be reliable, transparent, adaptive, and certifiable.
+  items:
+    - { title: Tractable and Certifiable Inference, lead: Vibhav Gogate, text: "Probabilistic circuits, structure-exploiting inference, and algorithms with provable convergence guarantees." }
+    - { title: Neuro-Symbolic Learning with Human Guidance, lead: Sriraam Natarajan, text: "Interactive systems that incorporate human preferences, corrections, and feedback in transparent ways." }
+    - { title: Optimization and Learning-to-Learn, lead: Rishabh Iyer, text: "Submodular optimization, bilevel optimization, meta-learning, and methods for efficient adaptation." }
+    - { title: Logic-Driven AI, lead: Gopal Gupta, text: "Logic programming and declarative frameworks for interpretable, consistent, and auditable AI." }
+    - { title: Multimodal Scene Understanding, lead: Yu Xiang, text: "Structured world models that unify perception, anticipation, 3D reasoning, and action." }
+    - { title: Robust and Trustworthy AI, lead: Feng Chen, text: "Models and verification methods that resist adversarial attacks and remain fair under distribution shifts." }
+    - { title: Multisensory AI for Vision and Audio, lead: Yapeng Tian, text: "Algorithms that align vision, audio, and language for robust perception in noisy environments." }
+    - { title: Adaptive Representation Learning, lead: Yunhui Guo, text: "Continual learning, generative modeling, and robust adaptation without catastrophic forgetting." }
+    - { title: Language and Knowledge for Scientific Discovery, lead: Vincent Ng, text: "Evidence-aware language models, living knowledge graphs, and discourse-driven extraction." }
+    - { title: Biomedical Language and Reasoning, lead: Sanda Harabagiu, text: "Transparent models for biomedical text understanding, clinical decision support, and hypothesis generation." }
+    - { title: Algorithmic Foundations of Probabilistic Inference, lead: Nicholas Ruozzi, text: "Convergence guarantees, structure-exploiting algorithms, and provably efficient approximation." }
+    - { title: Multimodal Reasoning and Attribution, lead: Zhiyu (Zoey) Chen, text: "Models that align multimodal evidence, attribute sources, and reason with structured uncertainty." }
+    - { title: Instruction-Tuned Language Models for Education, lead: Xinya Du, text: "Pedagogically aligned models that explain reasoning, adapt to learners, and provide constructive feedback." }

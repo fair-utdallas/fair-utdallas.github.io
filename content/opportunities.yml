@@ -1,0 +1,9 @@
+opportunities:
+  intro: Research-intensive training and interdisciplinary learning are central to FAIR’s mission at UT Dallas.
+  items:
+    - { title: Graduate research, text: Hands-on opportunities to contribute to foundational AI projects across research thrusts. }
+    - { title: Undergraduate research, text: Research assistantships and internships that introduce students to the practice of AI research. }
+    - { title: Courses + curricula, text: New and existing coursework in learning theory, probabilistic reasoning, neuro-symbolic AI, and trustworthy systems. }
+    - { title: Seminars + workshops, text: Research conversations, workshops, and summer schools led by UT Dallas faculty and external experts. }
+    - { title: Interdisciplinary projects, text: Collaboration bridging computer science with mathematics, engineering, cognitive science, and the social sciences. }
+    - { title: Workforce development, text: Preparation for leadership in academia, industry, government, and the broader AI ecosystem. }

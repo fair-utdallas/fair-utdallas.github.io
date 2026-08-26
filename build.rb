@@ -3,7 +3,10 @@
 require "yaml"
 require "cgi"
 
-DATA = YAML.load_file(File.join(__dir__, "content", "site.yml"))
+content_dir = File.join(__dir__, "content")
+DATA = Dir[File.join(content_dir, "*.yml")].sort.reduce({}) do |data, file|
+  data.merge(YAML.load_file(file))
+end
 SITE = DATA.fetch("site")
 
 def h(value)
@@ -124,15 +127,16 @@ HTML
 
 people = DATA["people"]
 leadership = people["leadership"].map do |p|
-  %Q{<div class="profile featured-profile"><span>#{h(p["role"])}</span><h3>#{h(p["name"])}</h3><p>#{h(p["text"])}</p></div>}
+  image = p["image"] ? %Q{<img class="person-image" src="#{h(p["image"])}" alt="#{h(p["name"])}">} : ""
+  %Q{<div class="profile featured-profile">#{image}<span>#{h(p["role"])}</span><h3>#{h(p["name"])}</h3><p>#{h(p["text"])}</p></div>}
 end.join
-names = ->(list) { list.each_with_index.map { |p, i| "<div><h3>#{h(p["name"])}</h3><p>#{h(p["area"])}</p></div>" }.join }
+names = ->(list) { list.each_with_index.map { |p, i| image = p["image"] ? %Q{<img class="person-image" src="#{h(p["image"])}" alt="#{h(p["name"])}">} : ""; "<div>#{image}<h3>#{h(p["name"])}</h3><p>#{h(p["area"])}</p></div>" }.join }
 people_body = subhero("People", "A community of\ncurious minds.", people["intro"]) + <<~HTML
   <section class="content-page">
     <div class="people-group"><h2>Leadership</h2><div class="profile-grid">#{leadership}</div></div>
     <div class="people-group"><h2>Executive Council</h2><div class="name-grid">#{names.call(people["council"])}</div></div>
     <div class="people-group"><h2>Co-Principal Investigators</h2><div class="name-grid co-pis">#{names.call(people["co_pis"])}</div></div>
-    <div class="people-group"><h2>Affiliated Faculty</h2><p class="group-intro">Faculty affiliated with FAIR span computer science, cognitive science, engineering, philosophy, biology, and public policy.</p><p class="faculty-cloud">#{h(people["affiliated_faculty"])}</p></div>
+    <div class="people-group"><h2>Affiliated Faculty</h2><p class="group-intro">Faculty affiliated with FAIR span computer science, cognitive science, engineering, philosophy, biology, and public policy.</p><div class="name-grid affiliated-faculty">#{names.call(people["affiliated_faculty"])}</div></div>
     <div class="people-group"><h2>External Affiliates</h2><div class="name-grid external-affiliates">#{names.call(people["external_affiliates"])}</div></div>
   </section>
 HTML

@@ -1,0 +1,7 @@
+partnerships:
+  intro: FAIR partners with organizations that want to engage with foundational AI research, talent, and ideas.
+  items:
+    - { title: Strategic research partnerships, text: Identify important AI challenges, shape joint research agendas, and support collaborative faculty and student projects. }
+    - { title: Industry Affiliates, text: A structured program for research interactions, recruiting pipelines, sponsored-project matchmaking, and symposium participation. }
+    - { title: Government collaboration, text: Engage with federal, state, and public-sector partners on trustworthy AI, workforce development, and national priorities. }
+    - { title: Technology translation, text: Create pathways for foundational advances, open-source tools, and research demonstrators to move toward deployment. }

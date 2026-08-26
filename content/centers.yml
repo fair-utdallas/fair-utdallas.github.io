@@ -1,0 +1,13 @@
+centers:
+  founding:
+    - { name: Center for Machine Learning, text: Theoretical frameworks, algorithms, and the core science of learning. }
+    - { name: Center for Applied Artificial Intelligence and Machine Learning, text: Bridging research and practice, with emphasis on neuro-symbolic AI and translational research. }
+    - { name: Vision and Computational Perception Group, text: Visual understanding, multimodal perception, and structured scene representations. }
+    - { name: UT Dallas Robotics Lab, text: Embodied AI, perception–action loops, and autonomy with physical systems. }
+    - { name: UT Dallas Starling Lab, text: Human-allied, interpretable, and explainable AI models, including in health. }
+    - { name: Optimization Lab, text: Fundamental algorithms for data subset selection, efficient learning, and model selection. }
+    - { name: AI Safety Lab, text: Robust and safe AI methods through responsible machine learning. }
+  partners:
+    - { name: Cybersecurity Research and Education Institute, text: Robust AI, adversarial machine learning, and security of AI-enabled systems. }
+    - { name: Human Language Technology Research Institute, text: Natural language processing, discourse, biomedical language technologies, and language-based reasoning. }
+    - { name: Algorithms and Theory Group, text: Basic research in theory and algorithms across a wide range of topics. }
