@@ -88,6 +88,26 @@ def write_page(file, title, active, body)
 end
 
 home = DATA["home"]
+thrusts = DATA.fetch("research").fetch("items")
+home_cards = home["research_featured"].map do |i|
+  item = thrusts.fetch(i)
+  <<~HTML
+    <a class="research-card" href="research.html">
+      <span class="card-number">#{format("%02d", i + 1)}</span>
+      <h3>#{h(item["title"])}</h3>
+      <p>#{h(item["text"])}</p>
+      <b>#{h(item["lead"])}</b>
+    </a>
+  HTML
+end.join
+home_cards += <<~HTML
+  <a class="research-card featured" href="research.html">
+    <span class="card-arrow">\u2197</span>
+    <span class="card-number">#{thrusts.length}</span>
+    <h3>#{h(home["research_cta"])}</h3>
+    <p>#{h(home["research_cta_text"])}</p>
+  </a>
+HTML
 home_body = <<~HTML
   <section class="hero page-section" id="home">
     <div class="hero-copy">
@@ -101,6 +121,18 @@ home_body = <<~HTML
   <section class="statement page-section">
     <div class="section-label">The institute</div>
     <div class="statement-content"><p class="display-copy">#{h(home["statement"])}</p><p class="body-copy">#{h(home["statement_detail"])}</p></div>
+  </section>
+  <section class="research page-section" id="research">
+    <div class="section-heading">
+      <div>
+        <div class="section-label">#{h(home["research_label"])}</div>
+        <h2>#{home["research_title"].gsub("\n", "<br>")}</h2>
+      </div>
+      <p>#{h(home["research_intro"])}</p>
+    </div>
+    <div class="research-grid">
+  #{home_cards}
+    </div>
   </section>
 HTML
 write_page("index.html", SITE["full_name"], "", home_body)

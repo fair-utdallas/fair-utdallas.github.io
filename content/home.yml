@@ -4,3 +4,9 @@ home:
   intro: FAIR is an umbrella institute for fundamental AI research at UT Dallas—bringing together the people, ideas, and disciplines shaping the future of intelligent systems.
   statement: FAIR brings fundamental questions about intelligence into conversation with the systems we can build.
   statement_detail: Rooted in the breadth of UT Dallas, the institute connects researchers across computer science, engineering, cognitive science, and related fields. Together, we study the foundations of AI and translate insight into responsible progress.
+  research_label: Research
+  research_title: "Thirteen thrusts.\n<em>One shared agenda.</em>"
+  research_intro: From tractable inference to multimodal reasoning, FAIR’s agenda spans the full arc of intelligent behavior—learning, reasoning, perception, language, and action.
+  research_featured: [0, 1, 4, 5, 8]
+  research_cta: All thirteen research thrusts
+  research_cta_text: Explore the full agenda across inference, optimization, robotics, language, and trustworthy AI.
