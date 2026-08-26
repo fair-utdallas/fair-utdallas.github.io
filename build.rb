@@ -150,7 +150,7 @@ centers_body = subhero("Centers + partners", "One institute.\nMany strengths.", 
   <section class="content-page">
     #{intro_band("Founding\n<em>centers.</em>", "Each center retains its own identity and leadership. FAIR connects their expertise into a cohesive research agenda.")}
     <div class="entity-list">#{entity_rows(centers["founding"])}</div>
-    <div class="intro-band partner-intro">#{intro_band("Partner\n<em>institutes.</em>", "FAIR extends its reach through close collaboration with partner institutes and groups.")}</div>
+    <div class="partner-intro">#{intro_band("Partner\n<em>institutes.</em>", "FAIR extends its reach through close collaboration with partner institutes and groups.")}</div>
     <div class="entity-list partner-list">#{entity_rows(centers["partners"])}</div>
   </section>
 HTML

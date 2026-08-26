@@ -4,7 +4,7 @@ centers:
     - { name: Center for Applied Artificial Intelligence and Machine Learning, text: Bridging research and practice, with emphasis on neuro-symbolic AI and translational research. }
     - { name: Vision and Computational Perception Group, text: Visual understanding, multimodal perception, and structured scene representations. }
     - { name: UT Dallas Robotics Lab, text: Embodied AI, perception–action loops, and autonomy with physical systems. }
-    - { name: StARLing Lab, text: Human-allied, interpretable, and explainable AI models, including in health. }
+    - { name: StARLing Lab, text: Human-allied AI, interpretable, and explainable AI models, including in health. }
     - { name: Optimization Lab, text: Fundamental algorithms for data subset selection, efficient learning, and model selection. }
     - { name: AI Safety Lab, text: Robust and safe AI methods through responsible machine learning. }
   partners:
