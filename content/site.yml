@@ -1,0 +1,94 @@
+site:
+  name: FAIR
+  full_name: Fundamental AI Research Institute
+  university: The University of Texas at Dallas
+  year: 2025
+  email: fair@utdallas.edu
+nav:
+  - label: Research
+    url: research.html
+  - label: People
+    url: people.html
+  - label: Centers + Partners
+    url: centers.html
+  - label: Opportunities
+    url: opportunities.html
+  - label: Partnerships
+    url: partnerships.html
+  - label: News
+    url: news.html
+home:
+  eyebrow: The University of Texas at Dallas · Est. 2025
+  title: "Understanding\nintelligence.\nBuilding what’s next."
+  intro: FAIR is an umbrella institute for fundamental AI research at UT Dallas—bringing together the people, ideas, and disciplines shaping the future of intelligent systems.
+  statement: FAIR brings fundamental questions about intelligence into conversation with the systems we can build.
+  statement_detail: Rooted in the breadth of UT Dallas, the institute connects researchers across computer science, engineering, cognitive science, and related fields. Together, we study the foundations of AI and translate insight into responsible progress.
+research:
+  intro: FAIR’s research agenda spans the enduring questions that determine whether AI can be reliable, transparent, adaptive, and certifiable.
+  items:
+    - { title: Tractable and Certifiable Inference, lead: Vibhav Gogate, text: "Probabilistic circuits, structure-exploiting inference, and algorithms with provable convergence guarantees." }
+    - { title: Neuro-Symbolic Learning with Human Guidance, lead: Sriraam Natarajan, text: "Interactive systems that incorporate human preferences, corrections, and feedback in transparent ways." }
+    - { title: Optimization and Learning-to-Learn, lead: Rishabh Iyer, text: "Submodular optimization, bilevel optimization, meta-learning, and methods for efficient adaptation." }
+    - { title: Logic-Driven AI, lead: Gopal Gupta, text: "Logic programming and declarative frameworks for interpretable, consistent, and auditable AI." }
+    - { title: Multimodal Scene Understanding, lead: Yu Xiang, text: "Structured world models that unify perception, anticipation, 3D reasoning, and action." }
+    - { title: Robust and Trustworthy AI, lead: Feng Chen, text: "Models and verification methods that resist adversarial attacks and remain fair under distribution shifts." }
+    - { title: Multisensory AI for Vision and Audio, lead: Yapeng Tian, text: "Algorithms that align vision, audio, and language for robust perception in noisy environments." }
+    - { title: Adaptive Representation Learning, lead: Yunhui Guo, text: "Continual learning, generative modeling, and robust adaptation without catastrophic forgetting." }
+    - { title: Language and Knowledge for Scientific Discovery, lead: Vincent Ng, text: "Evidence-aware language models, living knowledge graphs, and discourse-driven extraction." }
+    - { title: Biomedical Language and Reasoning, lead: Sanda Harabagiu, text: "Transparent models for biomedical text understanding, clinical decision support, and hypothesis generation." }
+    - { title: Algorithmic Foundations of Probabilistic Inference, lead: Nicholas Ruozzi, text: "Convergence guarantees, structure-exploiting algorithms, and provably efficient approximation." }
+    - { title: Multimodal Reasoning and Attribution, lead: Zhiyu (Zoey) Chen, text: "Models that align multimodal evidence, attribute sources, and reason with structured uncertainty." }
+    - { title: Instruction-Tuned Language Models for Education, lead: Xinya Du, text: "Pedagogically aligned models that explain reasoning, adapt to learners, and provide constructive feedback." }
+people:
+  intro: FAIR brings together faculty and collaborators across UT Dallas and beyond.
+  leadership:
+    - { role: Director · PI, name: Vibhav Gogate, text: "Professor of Computer Science and co-director of the Center for Machine Learning. Probabilistic inference, tractable models, and neuro-symbolic reasoning." }
+    - { role: Co-Director · Co-PI, name: Sriraam Natarajan, text: "Professor of Computer Science and AAAI Fellow. Machine learning, statistical relational AI, and human-in-the-loop approaches." }
+  council:
+    - { name: Gopal Gupta, area: Logic programming · Declarative AI }
+    - { name: Sanda Harabagiu, area: Natural language understanding · Biomedical AI }
+    - { name: Ovidiu Daescu, area: Algorithms · Computational geometry }
+    - { name: Feng Chen, area: Graph learning · Temporal data }
+    - { name: Nicholas Ruozzi, area: Algorithms · Optimization · Probabilistic models }
+  co_pis:
+    - { name: Rishabh Iyer, area: Optimization and decision-making }
+    - { name: Yu Xiang, area: 3D vision and robotics }
+    - { name: Yunhui Guo, area: Representation learning }
+    - { name: Yapeng Tian, area: Computer vision and multimodal learning }
+    - { name: Zhiyu (Zoey) Chen, area: NLP and multimodal reasoning }
+    - { name: Vincent Ng, area: NLP, information extraction, and discourse }
+    - { name: Xinya Du, area: NLP, language models, and education }
+  affiliated_faculty: Richard Golden · Yonas Tadasse · Justin Ruths · Xiaohu Guo · Lakshman Tamil · Jonathan Tsou · Meenakshi Maitra · Jey Veerasamy · Doug DeGroot · Elmer Salazar · Jie Zhang · Yanwen Xu · Patrick Brandt · Latifur Khan · Laisuo Su
+  external_affiliates: Researchers from TU Darmstadt, UCLA, Duke, Northeastern, Washington State, Oregon State, Tulane, UC Irvine, Indiana University, UT Southwestern, IIT Delhi, IIT Madras, and the Information Sciences Institute.
+centers:
+  founding:
+    - { name: Center for Machine Learning, text: Theoretical frameworks, algorithms, and the core science of learning. }
+    - { name: Center for Applied Artificial Intelligence and Machine Learning, text: Bridging research and practice, with emphasis on neuro-symbolic AI and translational research. }
+    - { name: Vision and Computational Perception Group, text: Visual understanding, multimodal perception, and structured scene representations. }
+    - { name: UT Dallas Robotics Lab, text: Embodied AI, perception–action loops, and autonomy with physical systems. }
+    - { name: UT Dallas Starling Lab, text: Human-allied, interpretable, and explainable AI models, including in health. }
+    - { name: Optimization Lab, text: Fundamental algorithms for data subset selection, efficient learning, and model selection. }
+    - { name: AI Safety Lab, text: Robust and safe AI methods through responsible machine learning. }
+  partners:
+    - { name: Cybersecurity Research and Education Institute, text: Robust AI, adversarial machine learning, and security of AI-enabled systems. }
+    - { name: Human Language Technology Research Institute, text: Natural language processing, discourse, biomedical language technologies, and language-based reasoning. }
+    - { name: Algorithms and Theory Group, text: Basic research in theory and algorithms across a wide range of topics. }
+opportunities:
+  intro: Research-intensive training and interdisciplinary learning are central to FAIR’s mission at UT Dallas.
+  items:
+    - { title: Graduate research, text: Hands-on opportunities to contribute to foundational AI projects across research thrusts. }
+    - { title: Undergraduate research, text: Research assistantships and internships that introduce students to the practice of AI research. }
+    - { title: Courses + curricula, text: New and existing coursework in learning theory, probabilistic reasoning, neuro-symbolic AI, and trustworthy systems. }
+    - { title: Seminars + workshops, text: Research conversations, workshops, and summer schools led by UT Dallas faculty and external experts. }
+    - { title: Interdisciplinary projects, text: Collaboration bridging computer science with mathematics, engineering, cognitive science, and the social sciences. }
+    - { title: Workforce development, text: Preparation for leadership in academia, industry, government, and the broader AI ecosystem. }
+partnerships:
+  intro: FAIR partners with organizations that want to engage with foundational AI research, talent, and ideas.
+  items:
+    - { title: Strategic research partnerships, text: Identify important AI challenges, shape joint research agendas, and support collaborative faculty and student projects. }
+    - { title: Industry Affiliates, text: A structured program for research interactions, recruiting pipelines, sponsored-project matchmaking, and symposium participation. }
+    - { title: Government collaboration, text: Engage with federal, state, and public-sector partners on trustworthy AI, workforce development, and national priorities. }
+    - { title: Technology translation, text: Create pathways for foundational advances, open-source tools, and research demonstrators to move toward deployment. }
+news:
+  intro: Updates, events, and research highlights from the FAIR community.
+  placeholder: Check back soon for FAIR news, seminars, workshops, and community events.
