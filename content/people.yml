@@ -15,8 +15,8 @@ people:
     - { name: Yunhui Guo, image: assets/people/yunhui_guo.jpg, area: Representation learning }
     - { name: Yapeng Tian, image: assets/people/yapeng_tian.jpg, area: Computer vision and multimodal learning }
     - { name: Zhiyu (Zoey) Chen, image: assets/people/zoey_zhiyu_chen.jpg, area: NLP and multimodal reasoning }
-    - { name: Vincent Ng, image: assets/people/vincent_ng.jpg, area: NLP, information extraction, and discourse }
-    - { name: Xinya Du, image: assets/people/xinya_du.jpg, area: NLP, language models, and education }
+    - { name: Vincent Ng, image: assets/people/vincent_ng.jpg, area: NLP (information extraction and discourse) }
+    - { name: Xinya Du, image: assets/people/xinya_du.jpg, area: NLP (language models and education) }
   affiliated_faculty:
     - { name: Richard Golden, area: Affiliated faculty }
     - { name: Yonas Tadasse, area: Affiliated faculty }
