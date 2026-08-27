@@ -2,7 +2,7 @@ people:
   intro: FAIR brings together faculty and collaborators across UT Dallas and beyond.
   leadership:
     - { role: Director · PI, name: Vibhav Gogate, image: assets/people/vibhav_gogate.jpg, text: "Professor of Computer Science and co-director of the Center for Machine Learning. Probabilistic inference, tractable models, and neuro-symbolic reasoning." }
-    - { role: Co-Director · Co-PI, name: Sriraam Natarajan, image: assets/people/sriraam_natarajan.jpg, text: "Presidential distinguished fellow of AI, Distinguished chair of CS and AAAI Fellow. Machine learning, statistical relational AI, and human-in-the-loop approaches." }
+    - { role: Co-Director · Co-PI, name: Sriraam Natarajan, image: assets/people/sriraam_natarajan.jpg, text: "Presidential distinguished fellow of AI, distinguished chair of CS and AAAI Fellow. Machine learning, statistical relational AI, and human-in-the-loop approaches." }
   council:
     - { name: Gopal Gupta, image: assets/people/gopal_gupta.jpg, area: Logic programming · Declarative AI }
     - { name: Sanda Harabagiu, image: assets/people/sanda_harabagiu.jpg, area: Natural language understanding · Biomedical AI }
