@@ -1,5 +1,12 @@
 partnerships:
+  label: Industry + government
+  title: "Research that\ntravels."
   intro: FAIR partners with organizations that want to engage with foundational AI research, talent, and ideas.
+  section_title: "From fundamental\n<em>questions to impact.</em>"
+  section_intro: Partnerships help translate advances in learning, reasoning, perception, language, and trustworthy AI into real-world practice.
+  application_title: "Let’s build\n<em>what’s next.</em>"
+  application_intro: FAIR welcomes conversations with industry, government, nonprofit, and academic organizations.
+  application_button: Start a conversation
   items:
     - { title: Strategic research partnerships, text: Identify important AI challenges, shape joint research agendas, and support collaborative faculty and student projects. }
     - { title: Industry Affiliates, text: A structured program for research interactions, recruiting pipelines, sponsored-project matchmaking, and symposium participation. }

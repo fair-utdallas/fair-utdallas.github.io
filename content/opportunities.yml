@@ -1,5 +1,12 @@
 opportunities:
+  label: Education + opportunities
+  title: "Learn by\ndoing the work."
   intro: Research-intensive training and interdisciplinary learning are central to FAIR’s mission at UT Dallas.
+  section_title: "The next generation\n<em>starts here.</em>"
+  section_intro: Research-intensive training and interdisciplinary learning are central to FAIR’s mission at UT Dallas.
+  callout_label: Interested in joining FAIR?
+  callout_title: "Bring your\n<em>question.</em>"
+  callout_button: Get in touch
   items:
     - { title: Graduate research, text: Hands-on opportunities to contribute to foundational AI projects across research thrusts. }
     - { title: Undergraduate research, text: Research assistantships and internships that introduce students to the practice of AI research. }

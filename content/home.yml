@@ -1,6 +1,6 @@
 home:
   eyebrow: The University of Texas at Dallas · Est. 2025
-  title: "Understanding\nintelligence.\nBuilding what’s next."
+  title: "Understanding\n<em>intelligence.</em>\nBuilding what’s next."
   intro: FAIR is an umbrella institute for fundamental AI research at UT Dallas—bringing together the people, ideas, and disciplines shaping the future of intelligent systems.
   statement: FAIR brings fundamental questions about intelligence into conversation with the systems we can build.
   statement_detail: Rooted in the breadth of UT Dallas, the institute connects researchers across computer science, engineering, cognitive science, and related fields. Together, we study the foundations of AI and translate insight into responsible progress.
@@ -10,3 +10,6 @@ home:
   research_featured: [0, 1, 4, 5, 8]
   research_cta: All thirteen research thrusts
   research_cta_text: Explore the full agenda across inference, optimization, robotics, language, and trustworthy AI.
+  explore_label: Explore our research
+  institute_label: The institute
+  visual_label: FAIR research dimensions

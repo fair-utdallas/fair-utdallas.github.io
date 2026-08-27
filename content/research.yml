@@ -1,5 +1,9 @@
 research:
+  label: Research
+  title: "Foundations for\ntrustworthy intelligence."
   intro: FAIR’s research agenda spans the enduring questions that determine whether AI can be reliable, transparent, adaptive, and certifiable.
+  section_title: "Thirteen paths.\n<em>One shared agenda.</em>"
+  section_intro: From tractable inference to multimodal reasoning, FAIR connects theory, algorithms, perception, language, and action across the full arc of intelligent behavior.
   items:
     - { title: Tractable and Certifiable Inference, lead: Vibhav Gogate, text: "Probabilistic circuits, structure-exploiting inference, and algorithms with provable convergence guarantees." }
     - { title: Neuro-Symbolic Learning with Human Guidance, lead: Sriraam Natarajan, text: "Interactive systems that incorporate human preferences, corrections, and feedback in transparent ways." }

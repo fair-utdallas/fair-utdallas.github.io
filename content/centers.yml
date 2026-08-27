@@ -1,4 +1,11 @@
 centers:
+  label: Centers + partners
+  title: "One institute.\nMany strengths."
+  intro: FAIR gives UT Dallas’s AI community a shared identity and a platform for collaboration.
+  founding_title: "Founding\n<em>centers.</em>"
+  founding_intro: Each center retains its own identity and leadership. FAIR connects their expertise into a cohesive research agenda.
+  partners_title: "Partner\n<em>institutes.</em>"
+  partners_intro: FAIR extends its reach through close collaboration with partner institutes and groups.
   founding:
     - { name: Center for Machine Learning, text: Theoretical frameworks, algorithms, and the core science of learning. }
     - { name: Center for Applied Artificial Intelligence and Machine Learning, text: Bridging research and practice, with emphasis on neuro-symbolic AI and translational research. }

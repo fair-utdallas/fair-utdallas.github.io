@@ -4,6 +4,16 @@ site:
   university: The University of Texas at Dallas
   year: 2026
   email: fair@utdallas.edu
+  brand_mark: F
+  nav_contact: Get in touch
+  footer_contact: Contact
+  menu_label: Toggle menu
+  link_arrow: ↗
+  down_arrow: ↘
+  visual:
+    core: FAIR
+    core_subtitle: UTD
+    nodes: [learn, reason, perceive, act]
 nav:
   - label: Research
     url: research.html
@@ -17,3 +27,9 @@ nav:
     url: partnerships.html
   - label: News
     url: news.html
+contact:
+  label: Contact
+  title: "Let’s explore\n<em>what’s possible.</em>"
+  intro: Whether you’re a researcher, student, partner, or simply curious about fundamental AI, we’d like to hear from you.
+  institute_label: Institute
+  email_label: Email

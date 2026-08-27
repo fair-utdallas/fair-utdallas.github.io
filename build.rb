@@ -18,7 +18,7 @@ def nav(active)
     active_class = item["url"] == active ? ' class="active"' : ""
     "      <a#{active_class} href=\"#{h(item["url"])}\">#{h(item["label"])} </a>"
   end
-  items << "      <a class=\"nav-contact\" href=\"contact.html\">Get in touch <span>↗</span></a>"
+  items << "      <a class=\"nav-contact\" href=\"contact.html\">#{h(SITE["nav_contact"])} <span>#{h(SITE["link_arrow"])}</span></a>"
   items.join("\n")
 end
 
@@ -39,11 +39,11 @@ def layout(title, active, body)
     <body>
       <div class="site-shell">
         <header class="topbar">
-          <a class="brand" href="index.html" aria-label="FAIR home">
-            <span class="brand-mark">F</span>
+          <a class="brand" href="index.html" aria-label="#{h(SITE["name"])} home">
+            <span class="brand-mark">#{h(SITE["brand_mark"])}</span>
             <span><strong>#{h(SITE["name"])}</strong><small>#{h(SITE["full_name"])}</small></span>
           </a>
-          <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+          <button class="menu-toggle" aria-label="#{h(SITE["menu_label"])}" aria-expanded="false"><span></span><span></span></button>
           <nav class="nav" aria-label="Main navigation">
     #{nav(active)}
           </nav>
@@ -54,7 +54,7 @@ def layout(title, active, body)
         <footer class="footer">
           <span>© #{h(SITE["year"])} #{h(SITE["full_name"])}</span>
           <span>#{h(SITE["university"])}</span>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">#{h(SITE["footer_contact"])}</a>
         </footer>
       </div>
       <script src="app.js"></script>
@@ -89,6 +89,7 @@ end
 
 home = DATA["home"]
 thrusts = DATA.fetch("research").fetch("items")
+visual = SITE["visual"]
 home_cards = home["research_featured"].map do |i|
   item = thrusts.fetch(i)
   <<~HTML
@@ -110,14 +111,14 @@ home_body = <<~HTML
   <section class="hero page-section" id="home">
     <div class="hero-copy">
       <p class="eyebrow">#{h(home["eyebrow"])}</p>
-      <h1>#{home["title"].gsub("\n", "<br>").sub("intelligence.", "<em>intelligence.</em>")}</h1>
+      <h1>#{home["title"].gsub("\n", "<br>")}</h1>
       <p class="hero-intro">#{h(home["intro"])}</p>
-      <a class="button button-dark" href="research.html">Explore our research <span>↘</span></a>
-    </div>
-    <div class="hero-visual"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="core">FAIR<span>UTD</span></div><span class="node node-a">learn</span><span class="node node-b">reason</span><span class="node node-c">perceive</span><span class="node node-d">act</span><svg class="constellation" viewBox="0 0 600 600" aria-hidden="true"><path d="M105 187L245 92 432 156 502 355 364 487 164 424zM245 92l119 395M432 156L164 424M105 187l397 168M105 187l59 237" /></svg></div>
+    <a class="button button-dark" href="research.html">#{h(home["explore_label"])} <span>#{h(SITE["down_arrow"])}</span></a>
+  </div>
+    <div class="hero-visual" aria-label="#{h(home["visual_label"])}"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="core">#{h(visual["core"])}<span>#{h(visual["core_subtitle"])}</span></div><span class="node node-a">#{h(visual["nodes"][0])}</span><span class="node node-b">#{h(visual["nodes"][1])}</span><span class="node node-c">#{h(visual["nodes"][2])}</span><span class="node node-d">#{h(visual["nodes"][3])}</span><svg class="constellation" viewBox="0 0 600 600" aria-hidden="true"><path d="M105 187L245 92 432 156 502 355 364 487 164 424zM245 92l119 395M432 156L164 424M105 187l397 168M105 187l59 237" /></svg></div>
   </section>
   <section class="statement page-section">
-    <div class="section-label">The institute</div>
+    <div class="section-label">#{h(home["institute_label"])}</div>
     <div class="statement-content"><p class="display-copy">#{h(home["statement"])}</p><p class="body-copy">#{h(home["statement_detail"])}</p></div>
   </section>
   <section class="research page-section" id="research">
@@ -145,9 +146,9 @@ research_items = research["items"].each_with_index.map do |item, i|
     </article>
   HTML
 end.join
-write_page("research.html", "Research", "research.html", subhero("Research", "Foundations for\ntrustworthy intelligence.", research["intro"]) + <<~HTML
+write_page("research.html", research["label"], "research.html", subhero(research["label"], research["title"], research["intro"]) + <<~HTML
   <section class="content-page">
-    #{intro_band("Thirteen paths.\n<em>One shared agenda.</em>", "From tractable inference to multimodal reasoning, FAIR connects theory, algorithms, perception, language, and action across the full arc of intelligent behavior.")}
+    #{intro_band(research["section_title"], research["section_intro"])}
     <div class="thrust-list">
   #{research_items}
     </div>
@@ -161,13 +162,13 @@ leadership = people["leadership"].map do |p|
   %Q{<div class="profile featured-profile">#{image}<span>#{h(p["role"])}</span><h3>#{h(p["name"])}</h3><p>#{h(p["text"])}</p></div>}
 end.join
 names = ->(list) { list.each_with_index.map { |p, i| image = p["image"] ? %Q{<img class="person-image" src="#{h(p["image"])}" alt="#{h(p["name"])}">} : ""; "<div>#{image}<h3>#{h(p["name"])}</h3><p>#{h(p["area"])}</p></div>" }.join }
-people_body = subhero("People", "A community of\ncurious minds.", people["intro"]) + <<~HTML
+people_body = subhero(people["label"], people["title"], people["intro"]) + <<~HTML
   <section class="content-page">
-    <div class="people-group"><h2>Leadership</h2><div class="profile-grid">#{leadership}</div></div>
-    <div class="people-group"><h2>Executive Council</h2><div class="name-grid">#{names.call(people["council"])}</div></div>
-    <div class="people-group"><h2>Co-Principal Investigators</h2><div class="name-grid co-pis">#{names.call(people["co_pis"])}</div></div>
-    <div class="people-group"><h2>Affiliated Faculty</h2><p class="group-intro">Faculty affiliated with FAIR span computer science, cognitive science, engineering, philosophy, biology, and public policy.</p><div class="name-grid affiliated-faculty">#{names.call(people["affiliated_faculty"])}</div></div>
-    <div class="people-group"><h2>External Affiliates</h2><div class="name-grid external-affiliates">#{names.call(people["external_affiliates"])}</div></div>
+    <div class="people-group"><h2>#{h(people["groups"]["leadership"])}</h2><div class="profile-grid">#{leadership}</div></div>
+    <div class="people-group"><h2>#{h(people["groups"]["council"])}</h2><div class="name-grid">#{names.call(people["council"])}</div></div>
+    <div class="people-group"><h2>#{h(people["groups"]["co_pis"])}</h2><div class="name-grid co-pis">#{names.call(people["co_pis"])}</div></div>
+    <div class="people-group"><h2>#{h(people["groups"]["affiliated_faculty"])}</h2><p class="group-intro">#{h(people["affiliated_intro"])}</p><div class="name-grid affiliated-faculty">#{names.call(people["affiliated_faculty"])}</div></div>
+    <div class="people-group"><h2>#{h(people["groups"]["external_affiliates"])}</h2><div class="name-grid external-affiliates">#{names.call(people["external_affiliates"])}</div></div>
   </section>
 HTML
 write_page("people.html", "People", "people.html", people_body)
@@ -176,53 +177,54 @@ def entity_rows(items)
   items.each_with_index.map { |item, i| "<div><span>#{format("%02d", i + 1)}</span><h3>#{h(item["name"])}</h3><p>#{h(item["text"])}</p></div>" }.join
 end
 centers = DATA["centers"]
-centers_body = subhero("Centers + partners", "One institute.\nMany strengths.", "FAIR gives UT Dallas’s AI community a shared identity and a platform for collaboration.") + <<~HTML
+centers_body = subhero(centers["label"], centers["title"], centers["intro"]) + <<~HTML
   <section class="content-page">
-    #{intro_band("Founding\n<em>centers.</em>", "Each center retains its own identity and leadership. FAIR connects their expertise into a cohesive research agenda.")}
+    #{intro_band(centers["founding_title"], centers["founding_intro"])}
     <div class="entity-list">#{entity_rows(centers["founding"])}</div>
-    <div class="partner-intro">#{intro_band("Partner\n<em>institutes.</em>", "FAIR extends its reach through close collaboration with partner institutes and groups.")}</div>
+    <div class="partner-intro">#{intro_band(centers["partners_title"], centers["partners_intro"] )}</div>
     <div class="entity-list partner-list">#{entity_rows(centers["partners"])}</div>
   </section>
 HTML
-write_page("centers.html", "Centers + Partners", "centers.html", centers_body)
+write_page("centers.html", centers["label"], "centers.html", centers_body)
 
 opps = DATA["opportunities"]
 opp_cards = opps["items"].each_with_index.map { |item, i| "<article><span>#{format("%02d", i + 1)}</span><h3>#{h(item["title"])}</h3><p>#{h(item["text"])}</p></article>" }.join
-write_page("opportunities.html", "Education + Opportunities", "opportunities.html", subhero("Education + opportunities", "Learn by\ndoing the work.", opps["intro"]) + <<~HTML
+write_page("opportunities.html", opps["label"], "opportunities.html", subhero(opps["label"], opps["title"], opps["intro"]) + <<~HTML
   <section class="content-page">
-    #{intro_band("The next generation\n<em>starts here.</em>", "Research-intensive training and interdisciplinary learning are central to FAIR’s mission at UT Dallas.")}
+    #{intro_band(opps["section_title"], opps["section_intro"])}
     <div class="opportunity-cards">#{opp_cards}</div>
-    <div class="callout"><span>Interested in joining FAIR?</span><h2>Bring your<br><em>question.</em></h2><a class="button button-dark" href="contact.html">Get in touch <span>↗</span></a></div>
+    <div class="callout"><span>#{h(opps["callout_label"])}</span><h2>#{opps["callout_title"].gsub("\n", "<br>")}</h2><a class="button button-dark" href="contact.html">#{h(opps["callout_button"])} <span>#{h(SITE["link_arrow"])}</span></a></div>
   </section>
 HTML
 )
 
 partnerships = DATA["partnerships"]
 partnership_rows = partnerships["items"].each_with_index.map { |item, i| "<div><span>#{format("%02d", i + 1)}</span><div><h3>#{h(item["title"])}</h3><p>#{h(item["text"])}</p></div></div>" }.join
-write_page("partnerships.html", "Industry + Government", "partnerships.html", subhero("Industry + government", "Research that\ntravels.", partnerships["intro"]) + <<~HTML
+write_page("partnerships.html", partnerships["label"], "partnerships.html", subhero(partnerships["label"], partnerships["title"], partnerships["intro"]) + <<~HTML
   <section class="content-page">
-    #{intro_band("From fundamental\n<em>questions to impact.</em>", "Partnerships help translate advances in learning, reasoning, perception, language, and trustworthy AI into real-world practice.")}
+    #{intro_band(partnerships["section_title"], partnerships["section_intro"])}
     <div class="partnership-rows">#{partnership_rows}</div>
-    <div class="application-band"><h2>Let’s build<br><em>what’s next.</em></h2><p>FAIR welcomes conversations with industry, government, nonprofit, and academic organizations.</p><a class="button button-dark" href="contact.html">Start a conversation <span>↗</span></a></div>
+    <div class="application-band"><h2>#{partnerships["application_title"].gsub("\n", "<br>")}</h2><p>#{h(partnerships["application_intro"])}</p><a class="button button-dark" href="contact.html">#{h(partnerships["application_button"])} <span>#{h(SITE["link_arrow"])}</span></a></div>
   </section>
 HTML
 )
 
 news = DATA["news"]
-write_page("news.html", "News + Events", "news.html", subhero("News + events", "What’s\nahead.", news["intro"]) + <<~HTML
-  <section class="content-page"><div class="empty-news large-empty"><span>Coming soon</span><h2>We’re preparing the<br><em>first updates.</em></h2><p>#{h(news["placeholder"])}</p></div></section>
+write_page("news.html", news["label"], "news.html", subhero(news["label"], news["title"], news["intro"]) + <<~HTML
+  <section class="content-page"><div class="empty-news large-empty"><span>#{h(news["status"])}</span><h2>#{news["placeholder_title"].gsub("\n", "<br>")}</h2><p>#{h(news["placeholder"])}</p></div></section>
 HTML
 )
 
-write_page("contact.html", "Contact", "contact.html", <<~HTML
+contact = DATA["contact"]
+write_page("contact.html", contact["label"], "contact.html", <<~HTML
   <section class="contact contact-page">
-    <div class="contact-orb" aria-hidden="true"></div><div class="section-label">Contact</div>
-    <h1>Let’s explore<br><em>what’s possible.</em></h1>
-    <p>Whether you’re a researcher, student, partner, or simply curious about fundamental AI, we’d like to hear from you.</p>
-    <a class="button button-light" href="mailto:#{h(SITE["email"])}">#{h(SITE["email"])} <span>↗</span></a>
-    <div class="contact-details"><div><span>Institute</span><p>#{h(SITE["full_name"])}<br>#{h(SITE["university"])}</p></div><div><span>Email</span><p><a href="mailto:#{h(SITE["email"])}">#{h(SITE["email"])}</a></p></div></div>
+    <div class="contact-orb" aria-hidden="true"></div><div class="section-label">#{h(contact["label"])}</div>
+    <h1>#{contact["title"].gsub("\n", "<br>")}</h1>
+    <p>#{h(contact["intro"])}</p>
+    <a class="button button-light" href="mailto:#{h(SITE["email"])}">#{h(SITE["email"])} <span>#{h(SITE["link_arrow"])}</span></a>
+    <div class="contact-details"><div><span>#{h(contact["institute_label"])}</span><p>#{h(SITE["full_name"])}<br>#{h(SITE["university"])}</p></div><div><span>#{h(contact["email_label"])}</span><p><a href="mailto:#{h(SITE["email"])}">#{h(SITE["email"])}</a></p></div></div>
   </section>
 HTML
 )
 
-puts "Built #{%w[index research people centers opportunities partnerships news contact].length} FAIR pages from content/site.yml"
+puts "Built #{%w[index research people centers opportunities partnerships news contact].length} FAIR pages from content/*.yml"

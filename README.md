@@ -4,7 +4,7 @@ This is a static site for the Fundamental AI Research Institute at UT Dallas.
 
 ## Edit content
 
-Content lives in [`content/site.yml`](content/site.yml). Update the YAML values and lists there; do not edit the generated HTML pages by hand.
+Content lives in the YAML files under [`content/`](content/). Update those values and lists; do not edit the generated HTML pages by hand.
 
 ## Build
 

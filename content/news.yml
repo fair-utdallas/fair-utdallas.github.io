@@ -1,3 +1,7 @@
 news:
+  label: News + events
+  title: "What’s\nahead."
   intro: Updates, events, and research highlights from the FAIR community.
   placeholder: Check back soon for FAIR news, seminars, workshops, and community events.
+  status: Coming soon
+  placeholder_title: "We’re preparing the\n<em>first updates.</em>"

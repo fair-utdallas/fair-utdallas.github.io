@@ -1,16 +1,6 @@
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 
-const pageLinks = [['partnerships.html', 'Partnerships'], ['news.html', 'News']];
-pageLinks.forEach(([href, label]) => {
-  if (nav && !nav.querySelector(`[href="${href}"]`)) {
-    const link = document.createElement('a');
-    link.href = href;
-    link.textContent = label;
-    nav.insertBefore(link, nav.querySelector('.nav-contact'));
-  }
-});
-
 toggle?.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   toggle.setAttribute('aria-expanded', String(open));

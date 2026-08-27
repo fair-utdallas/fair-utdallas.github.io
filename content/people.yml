@@ -1,5 +1,14 @@
 people:
+  label: People
+  title: "A community of\ncurious minds."
   intro: FAIR brings together faculty and collaborators across UT Dallas and beyond.
+  groups:
+    leadership: Leadership
+    council: Executive Council
+    co_pis: Co-Principal Investigators
+    affiliated_faculty: Affiliated Faculty
+    external_affiliates: External Affiliates
+  affiliated_intro: Faculty affiliated with FAIR span computer science, cognitive science, engineering, philosophy, biology, and public policy.
   leadership:
     - { role: Director · PI, name: Vibhav Gogate, image: assets/people/vibhav_gogate.jpg, text: "Professor of Computer Science and co-director of the Center for Machine Learning. Probabilistic inference, tractable models, and neuro-symbolic reasoning." }
     - { role: Co-Director · Co-PI, name: Sriraam Natarajan, image: assets/people/sriraam_natarajan.jpg, text: "Presidential distinguished fellow of AI, distinguished chair of CS and AAAI Fellow. Machine learning, statistical relational AI, and human-in-the-loop approaches." }
