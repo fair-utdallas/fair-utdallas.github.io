@@ -22,7 +22,8 @@ def nav(active)
   items.join("\n")
 end
 
-def layout(title, active, body)
+def layout(title, active, body, footer: true)
+  footer_html = footer ? %Q{<footer class="footer">\n      <span>© #{h(SITE["year"])} #{h(SITE["full_name"])}</span>\n      <span>#{h(SITE["university"])}</span>\n      <a href="contact.html">#{h(SITE["footer_contact"])}</a>\n    </footer>} : ""
   <<~HTML
     <!doctype html>
     <html lang="en">
@@ -51,11 +52,7 @@ def layout(title, active, body)
         <main>
     #{body}
         </main>
-        <footer class="footer">
-          <span>© #{h(SITE["year"])} #{h(SITE["full_name"])}</span>
-          <span>#{h(SITE["university"])}</span>
-          <a href="contact.html">#{h(SITE["footer_contact"])}</a>
-        </footer>
+        #{footer_html}
       </div>
       <script src="app.js"></script>
     </body>
@@ -83,8 +80,8 @@ def intro_band(title, text)
   HTML
 end
 
-def write_page(file, title, active, body)
-  File.write(File.join(__dir__, file), layout(title, active, body))
+def write_page(file, title, active, body, footer: true)
+  File.write(File.join(__dir__, file), layout(title, active, body, footer: footer))
 end
 
 home = DATA["home"]
@@ -107,6 +104,12 @@ home_cards += <<~HTML
     <p>#{h(home["research_cta_text"])}</p>
   </a>
 HTML
+opportunities_all = DATA.fetch("opportunities").fetch("items")
+home_opps = home["education_featured"].map do |i|
+  item = opportunities_all.fetch(i)
+  %Q{<div><span>#{format("%02d", i + 1)}</span><h3>#{h(item["title"])}</h3><p>#{h(item["text"])}</p></div>}
+end.join
+home_domains = home["why_domains"].map { |d| "<span>#{h(d)}</span>" }.join
 home_body = <<~HTML
   <section class="hero page-section" id="home">
     <div class="hero-copy">
@@ -121,6 +124,18 @@ home_body = <<~HTML
     <div class="section-label">#{h(home["institute_label"])}</div>
     <div class="statement-content"><p class="display-copy">#{h(home["statement"])}</p><p class="body-copy">#{h(home["statement_detail"])}</p></div>
   </section>
+  <section class="dark-band page-section" id="why">
+    <div class="section-label">#{h(home["why_label"])}</div>
+    <div class="dark-band-grid">
+      <h2>#{home["why_title"].gsub("\n", "<br>")}</h2>
+      <div>
+        <p>#{home["why_lead"]}</p>
+        <p>#{h(home["why_detail"])}</p>
+        <a class="text-link" href="research.html">#{h(home["why_link"])} <span>#{h(SITE["link_arrow"])}</span></a>
+      </div>
+    </div>
+    <div class="partner-lines">#{home_domains}</div>
+  </section>
   <section class="research page-section" id="research">
     <div class="section-heading">
       <div>
@@ -133,8 +148,27 @@ home_body = <<~HTML
   #{home_cards}
     </div>
   </section>
+  <section class="education dark-band page-section" id="education">
+    <div class="section-label">#{h(home["education_label"])}</div>
+    <div class="education-grid">
+      <div>
+        <h2>#{home["education_title"].gsub("\n", "<br>")}</h2>
+        <p>#{h(home["education_intro"])}</p>
+        <a class="text-link" href="opportunities.html">#{h(home["education_link"])} <span>\u2197</span></a>
+      </div>
+      <div class="opportunity-stack">#{home_opps}</div>
+    </div>
+  </section>
+  <section class="contact page-section" id="contact">
+    <div class="contact-orb" aria-hidden="true"></div>
+    <div class="section-label">#{h(home["contact_label"])}</div>
+    <h2>#{home["contact_title"].gsub("\n", "<br>")}</h2>
+    <p>#{h(home["contact_intro"])}</p>
+    <a class="button button-light" href="mailto:#{h(SITE["email"])}">#{h(SITE["email"])} <span>#{h(SITE["link_arrow"])}</span></a>
+    <div class="contact-footer"><span>© #{h(SITE["year"])} #{h(SITE["full_name"])}</span><span>#{h(SITE["university"])}</span><a href="contact.html">#{h(SITE["footer_contact"])}</a></div>
+  </section>
 HTML
-write_page("index.html", SITE["full_name"], "", home_body)
+write_page("index.html", SITE["full_name"], "", home_body, footer: false)
 
 research = DATA["research"]
 research_items = research["items"].each_with_index.map do |item, i|

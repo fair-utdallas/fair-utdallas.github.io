@@ -2,8 +2,8 @@ home:
   eyebrow: The University of Texas at Dallas · Est. 2025
   title: "Understanding\n<em>intelligence.</em>\nBuilding what’s next."
   intro: FAIR is an umbrella institute for fundamental AI research at UT Dallas—bringing together the people, ideas, and disciplines shaping the future of intelligent systems.
-  statement: FAIR brings fundamental questions about intelligence into conversation with the systems we can build.
-  statement_detail: Rooted in the breadth of UT Dallas, the institute connects researchers across computer science, engineering, cognitive science, and related fields. Together, we study the foundations of AI and translate insight into responsible progress.
+  statement: FAIR advances the fundamental science of AI—unifying learning, reasoning, perception, and language into frameworks that are transparent, scalable, and human-aligned.
+  statement_detail: Rooted in the breadth of UT Dallas, FAIR is an umbrella institute spanning learning, reasoning, knowledge representation, planning, and language—the whole of AI, not one corner of it. Founding centers and partner institutes keep their own identity while sharing a single research agenda.
   research_label: Research
   research_title: "Thirteen thrusts.\n<em>One shared agenda.</em>"
   research_intro: From tractable inference to multimodal reasoning, FAIR’s agenda spans the full arc of intelligent behavior—learning, reasoning, perception, language, and action.
@@ -13,3 +13,17 @@ home:
   explore_label: Explore our research
   institute_label: The institute
   visual_label: FAIR research dimensions
+  education_label: Education + opportunities
+  education_title: "The next generation\n<em>starts here.</em>"
+  education_intro: Research-intensive training is central to FAIR’s mission. Students work alongside faculty on foundational problems, not on the periphery of them.
+  education_featured: [0, 1, 3, 5]
+  education_link: See all opportunities
+  why_label: Why fundamental AI
+  why_title: "Weak foundations\n<em>propagate everywhere.</em>"
+  why_lead: "Today’s systems <em>hallucinate, fail silently under distribution shift, cannot explain their conclusions, and offer no formal guarantees of safety</em>. These are not application-level bugs to be patched one deployment at a time—they are <em>symptoms of missing science</em>."
+  why_detail: A hospital cannot certify a model it cannot verify. A regulator cannot audit a decision process with no interpretable structure. Strengthen the foundations and every system built on them improves at once.
+  why_link: Explore the research agenda
+  why_domains: [Healthcare, Autonomous systems, Cybersecurity, National security]
+  contact_label: Get in touch
+  contact_title: "Start a\n<em>conversation.</em>"
+  contact_intro: Whether you’re a researcher, a prospective student, or a potential partner, we’d like to hear from you.
