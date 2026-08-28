@@ -13,47 +13,49 @@ people:
     - { role: Director · PI, name: Vibhav Gogate, image: assets/people/vibhav_gogate.jpg, text: "Professor of Computer Science and co-director of the Center for Machine Learning. Probabilistic inference, tractable models, and neuro-symbolic reasoning." }
     - { role: Co-Director · Co-PI, name: Sriraam Natarajan, image: assets/people/sriraam_natarajan.jpg, text: "Presidential distinguished fellow of AI, distinguished chair of CS, and AAAI Fellow. Machine learning, statistical relational AI, and human-in-the-loop approaches." }
   council:
+    - { name: Feng Chen, image: assets/people/feng_chen.jpg, area: Graph learning · Temporal data }
+    - { name: Ovidiu Daescu, image: assets/people/ovidiu_daescu.jpg, area: Algorithms · Computational geometry }
     - { name: Gopal Gupta, image: assets/people/gopal_gupta.jpg, area: Logic programming · Declarative AI }
     - { name: Sanda Harabagiu, image: assets/people/sanda_harabagiu.jpg, area: Natural language understanding · Biomedical AI }
-    - { name: Ovidiu Daescu, image: assets/people/ovidiu_daescu.jpg, area: Algorithms · Computational geometry }
-    - { name: Feng Chen, image: assets/people/feng_chen.jpg, area: Graph learning · Temporal data }
     - { name: Nicholas Ruozzi, image: assets/people/nicholas_ruozzi.png, area: Algorithms · Optimization · Probabilistic models }
   co_pis:
-    - { name: Rishabh Iyer, image: assets/people/rishabh_iyer.png, area: Optimization and decision-making }
-    - { name: Yu Xiang, image: assets/people/yu_xiang.jpg, area: 3D vision and robotics }
-    - { name: Yunhui Guo, image: assets/people/yunhui_guo.jpg, area: Representation learning }
-    - { name: Yapeng Tian, image: assets/people/yapeng_tian.jpg, area: Computer vision and multimodal learning }
     - { name: Zhiyu (Zoey) Chen, image: assets/people/zoey_zhiyu_chen.jpg, area: NLP and multimodal reasoning }
-    - { name: Vincent Ng, image: assets/people/vincent_ng.jpg, area: NLP (information extraction and discourse) }
     - { name: Xinya Du, image: assets/people/xinya_du.jpg, area: NLP (language models and education) }
+    - { name: Yunhui Guo, image: assets/people/yunhui_guo.jpg, area: Representation learning }
+    - { name: Rishabh Iyer, image: assets/people/rishabh_iyer.png, area: Optimization and decision-making }
+    - { name: Vincent Ng, image: assets/people/vincent_ng.jpg, area: NLP (information extraction and discourse) }
+    - { name: Yapeng Tian, image: assets/people/yapeng_tian.jpg, area: Computer vision and multimodal learning }
+    - { name: Yu Xiang, image: assets/people/yu_xiang.jpg, area: 3D vision and robotics }
+
   affiliated_faculty:
+    - { name: Patrick Brandt, area: Affiliated faculty }
+    - { name: Doug DeGroot, area: Affiliated faculty }
     - { name: Richard Golden, area: Affiliated faculty }
-    - { name: Yonas Tadasse, area: Affiliated faculty }
-    - { name: Justin Ruths, area: Affiliated faculty }
     - { name: Xiaohu Guo, area: Affiliated faculty }
+    - { name: Latifur Khan, area: Affiliated faculty }
+    - { name: Meenakshi Maitra, area: Affiliated faculty }
+    - { name: Justin Ruths, area: Affiliated faculty }
+    - { name: Elmer Salazar, area: Affiliated faculty }
+    - { name: Laisuo Su, area: Affiliated faculty }
+    - { name: Yonas Tadasse, area: Affiliated faculty }
     - { name: Lakshman Tamil, area: Affiliated faculty }
     - { name: Jonathan Tsou, area: Affiliated faculty }
-    - { name: Meenakshi Maitra, area: Affiliated faculty }
     - { name: Jey Veerasamy, area: Affiliated faculty }
-    - { name: Doug DeGroot, area: Affiliated faculty }
-    - { name: Elmer Salazar, area: Affiliated faculty }
-    - { name: Jie Zhang, area: Affiliated faculty }
     - { name: Yanwen Xu, area: Affiliated faculty }
-    - { name: Patrick Brandt, area: Affiliated faculty }
-    - { name: Latifur Khan, area: Affiliated faculty }
-    - { name: Laisuo Su, area: Affiliated faculty }
+    - { name: Jie Zhang, area: Affiliated faculty }
+
   external_affiliates:
-    - { name: Kristian Kersting, area: "Professor and head of hessian.AI · TU Darmstadt · AAAI, EurAI, and AAIA Fellow" }
     - { name: Guy Van den Broeck, area: "Professor and Samuel Fellow · UCLA" }
-    - { name: Ronald Parr, area: "Professor · Duke University · AAAI Fellow" }
-    - { name: Predrag Radivojac, area: "Professor · Northeastern University · ISMB Fellow" }
     - { name: Janardhan Doppa, area: "Huie-Rogers Endowed Chair Professor of Computer Science and Berry Distinguished Professor in Engineering · Washington State University" }
-    - { name: Prasad Tadepalli, area: "Professor · Oregon State University" }
-    - { name: Nick Mattei, area: "Assistant Professor · Tulane University" }
-    - { name: Sameer Singh, area: "Professor · University of California, Irvine" }
-    - { name: Jay Pujara, area: "Principal Scientist · Information Sciences Institute" }
     - { name: David Haas, area: "Professor · Indiana University School of Medicine" }
+    - { name: Kristian Kersting, area: "Professor and head of hessian.AI · TU Darmstadt · AAAI, EurAI, and AAIA Fellow" }
+    - { name: Nick Mattei, area: "Assistant Professor · Tulane University" }
+    - { name: Ronald Parr, area: "Professor · Duke University · AAAI Fellow" }
+    - { name: Jay Pujara, area: "Principal Scientist · Information Sciences Institute" }
+    - { name: Predrag Radivojac, area: "Professor · Northeastern University · ISMB Fellow" }
     - { name: Lakshmi Raman, area: "Professor · UT Southwestern" }
-    - { name: Mausam, area: "Professor · Indian Institute of Technology Delhi · AAAI Fellow" }
-    - { name: Parag Singla, area: "Professor and Head, School of AI · Indian Institute of Technology Delhi" }
     - { name: Balaraman Ravindran, area: "Professor and Head, Wadhwani School of AI · Indian Institute of Technology, Madras" }
+    - { name: Sameer Singh, area: "Professor · University of California, Irvine" }
+    - { name: Parag Singla, area: "Professor and Head, School of AI · Indian Institute of Technology Delhi" }
+    - { name: Prasad Tadepalli, area: "Professor · Oregon State University" }
+    - { name: Mausam, area: "Professor · Indian Institute of Technology Delhi · AAAI Fellow" }
