@@ -50,6 +50,7 @@ people:
     - { name: David Haas, area: "Professor · Indiana University School of Medicine" }
     - { name: Kristian Kersting, area: "Professor and head of hessian.AI · TU Darmstadt · AAAI, EurAI, and AAIA Fellow" }
     - { name: Nick Mattei, area: "Assistant Professor · Tulane University" }
+    - { name: Mausam, area: "Professor · Indian Institute of Technology Delhi · AAAI Fellow" }
     - { name: Ronald Parr, area: "Professor · Duke University · AAAI Fellow" }
     - { name: Jay Pujara, area: "Principal Scientist · Information Sciences Institute" }
     - { name: Predrag Radivojac, area: "Professor · Northeastern University · ISMB Fellow" }
@@ -58,4 +59,3 @@ people:
     - { name: Sameer Singh, area: "Professor · University of California, Irvine" }
     - { name: Parag Singla, area: "Professor and Head, School of AI · Indian Institute of Technology Delhi" }
     - { name: Prasad Tadepalli, area: "Professor · Oregon State University" }
-    - { name: Mausam, area: "Professor · Indian Institute of Technology Delhi · AAAI Fellow" }
