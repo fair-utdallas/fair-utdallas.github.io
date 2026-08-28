@@ -99,7 +99,7 @@ home_cards = home["research_featured"].map do |i|
 end.join
 home_cards += <<~HTML
   <a class="research-card featured" href="research.html">
-    <span class="card-arrow">\u2197</span>
+      <span class="card-arrow">#{h(SITE["link_arrow"])}</span>
     <h3>#{h(home["research_cta"])}</h3>
     <p>#{h(home["research_cta_text"])}</p>
   </a>
@@ -154,7 +154,7 @@ home_body = <<~HTML
       <div>
         <h2>#{home["education_title"].gsub("\n", "<br>")}</h2>
         <p>#{h(home["education_intro"])}</p>
-        <a class="text-link" href="opportunities.html">#{h(home["education_link"])} <span>\u2197</span></a>
+        <a class="text-link" href="opportunities.html">#{h(home["education_link"])} <span>#{h(SITE["link_arrow"])}</span></a>
       </div>
       <div class="opportunity-stack">#{home_opps}</div>
     </div>
@@ -205,7 +205,7 @@ people_body = subhero(people["label"], people["title"], people["intro"]) + <<~HT
     <div class="people-group"><h2>#{h(people["groups"]["external_affiliates"])}</h2><div class="name-grid external-affiliates">#{names.call(people["external_affiliates"])}</div></div>
   </section>
 HTML
-write_page("people.html", "People", "people.html", people_body)
+write_page("people.html", people["label"], "people.html", people_body)
 
 def entity_rows(items)
   items.each_with_index.map { |item, i| "<div><span>#{format("%02d", i + 1)}</span><h3>#{h(item["name"])}</h3><p>#{h(item["text"])}</p></div>" }.join
