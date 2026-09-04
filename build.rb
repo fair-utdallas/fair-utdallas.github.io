@@ -41,8 +41,7 @@ def layout(title, active, body, footer: true)
       <div class="site-shell">
         <header class="topbar">
           <a class="brand" href="index.html" aria-label="#{h(SITE["name"])} home">
-            <span class="brand-mark">#{h(SITE["brand_mark"])}</span>
-            <span><strong>#{h(SITE["name"])}</strong><small>#{h(SITE["full_name"])}</small></span>
+            <img class="brand-logo" src="#{h(SITE["logo"]["full"])}" alt="" aria-hidden="true">
           </a>
           <button class="menu-toggle" aria-label="#{h(SITE["menu_label"])}" aria-expanded="false"><span></span><span></span></button>
           <nav class="nav" aria-label="Main navigation">
@@ -118,7 +117,7 @@ home_body = <<~HTML
       <p class="hero-intro">#{h(home["intro"])}</p>
     <a class="button button-dark" href="research.html">#{h(home["explore_label"])} <span>#{h(SITE["down_arrow"])}</span></a>
   </div>
-    <div class="hero-visual" aria-label="#{h(home["visual_label"])}"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="core">#{h(visual["core"])}<span>#{h(visual["core_subtitle"])}</span></div><span class="node node-a">#{h(visual["nodes"][0])}</span><span class="node node-b">#{h(visual["nodes"][1])}</span><span class="node node-c">#{h(visual["nodes"][2])}</span><span class="node node-d">#{h(visual["nodes"][3])}</span><svg class="constellation" viewBox="0 0 600 600" aria-hidden="true"><path d="M105 187L245 92 432 156 502 355 364 487 164 424zM245 92l119 395M432 156L164 424M105 187l397 168M105 187l59 237" /></svg></div>
+    <div class="hero-visual" aria-label="#{h(home["visual_label"])}"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="core"><img src="#{h(SITE["logo"]["small"])}" alt="FAIR logo"></div><span class="node node-a">#{h(visual["nodes"][0])}</span><span class="node node-b">#{h(visual["nodes"][1])}</span><span class="node node-c">#{h(visual["nodes"][2])}</span><span class="node node-d">#{h(visual["nodes"][3])}</span><svg class="constellation" viewBox="0 0 600 600" aria-hidden="true"><path d="M105 187L245 92 432 156 502 355 364 487 164 424zM245 92l119 395M432 156L164 424M105 187l397 168M105 187l59 237" /></svg></div>
   </section>
   <section class="statement page-section">
     <div class="section-label">#{h(home["institute_label"])}</div>

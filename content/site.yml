@@ -5,6 +5,9 @@ site:
   year: 2026
   email: fair@utdallas.edu
   brand_mark: F
+  logo:
+    full: assets/logo/fair_logo_full.jpeg
+    small: assets/logo/fair_logo_small.jpeg
   nav_contact: Get in touch
   footer_contact: Contact
   menu_label: Toggle menu
